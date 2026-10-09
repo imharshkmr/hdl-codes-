@@ -1,0 +1,32 @@
+`default_nettype none
+module top_module(
+    input a,
+    input b,
+    input c,
+    input d,
+    output out,
+    output out_n   ); 
+    wire p,q,r;
+    assign p= a&b;
+    assign q= c&d;
+    assign r= p|q;
+    assign out = r;
+    assign out_n = ~r;
+
+endmodule
+/*HDL Wire Naming Restrictions (Summary)
+
+✅ Must start with a letter or underscore (_)
+
+✅ Can contain:
+
+Letters (A-Z, a-z)
+Numbers (0-9)
+Underscore (_)
+
+❌ Cannot:
+
+Start with a number (1data)
+Contain spaces (data bus)
+Use special characters (data#, fifo-empty)
+Use reserved keywords (module, input, always)*/
